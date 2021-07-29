@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SweetHomeProject';
+  //public datetime: new DateTime();
+  //birth: "1990-06-23 08:10"
 }

@@ -1,0 +1,22 @@
+<div>
+  <div >
+    <h1 style="display: flex; padding-left: 60px; margin-bottom: 10px;margin-top: 15px;">Welcome to SweetHome!</h1>
+  </div>
+  <div fxLayout="row">
+    <div style="margin-top: 25px;" class="table-data" fxFlex="none">
+      <table-data></table-data>
+    </div>
+  </div>
+
+  <div>
+    <div echarts
+    [options]="option1"
+    fxLayoutAlign="end start"
+    style="margin-right: 10px;"></div>
+    <div echarts
+    [options]="option2"
+    class="chart_columns"
+    fxLayoutAlign="center end"></div>
+  </div>
+
+</div>

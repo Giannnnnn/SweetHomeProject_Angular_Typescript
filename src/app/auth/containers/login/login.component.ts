@@ -41,5 +41,18 @@ export class LoginComponent implements OnInit {
         this.loginForm.setErrors({error: 'invalid login'})
       }
     };
+    // login() {
+    //   this.authService.login(
+    //     {
+    //       username: this.f.username.value,
+    //       password: this.f.password.value
+    //     }
+    //   )
+    //   .subscribe(success => {
+    //     if (success) {
+    //       this.router.navigate(['/secret-random-number']);
+    //     }
+    //   });
+    // }
   }
 

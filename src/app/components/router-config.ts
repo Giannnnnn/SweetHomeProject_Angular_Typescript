@@ -5,6 +5,7 @@ import { HomeComponent } from "./home/home.component";
 import { Routes } from '@angular/router';
 import { RealtyComponent } from './realty/realty.component';
 import { BillsComponent } from './bills/bills.component';
+import { LoginComponent } from '../auth/containers/login/login.component';
 
 export const routerConfig: Routes = [
     {
@@ -43,6 +44,10 @@ export const routerConfig: Routes = [
         path: 'user',
         component: UserComponent
     },
+    {
+      path: 'login',
+      component: LoginComponent
+  },
     {
         path: '',
         redirectTo: '/home',

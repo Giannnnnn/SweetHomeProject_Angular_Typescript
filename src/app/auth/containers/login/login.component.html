@@ -1,0 +1,21 @@
+<mat-icon aria-hidden="false" class="home">home</mat-icon>
+<div fxLayout="column" fxLayoutAlign="center center" >
+
+<form [formGroup]="loginForm" (ngSubmit)="login()" >
+
+  <mat-form-field >
+    <input matInput type="text" id="username" placeholder="Username" autocomplete="off" formControlName="user" required>
+  </mat-form-field>
+
+  <mat-form-field >
+    <input matInput type="password" id="password" placeholder="Password" formControlName="password" required>
+  </mat-form-field>
+  <mat-error *ngIf="loginForm.hasError('error')">Dados de login inválidos</mat-error>
+  <div class="actions">
+    <button mat-raised-button type="submit" [disabled]="!loginForm.valid" class="button">LOG IN</button>
+    <button mat-raised-button type="submit" [disabled]="!loginForm.valid" class="button">Registration</button>
+  </div>
+
+</form>
+
+</div>

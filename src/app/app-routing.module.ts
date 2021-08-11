@@ -9,9 +9,22 @@ import { UsersComponent } from './components/users/users.component';
 import { HomeComponent } from './components/home/home.component';
 import { RealtiesComponent } from './components/realties/realties.component';
 import { RealtyComponent } from './components/realty/realty.component';
+import { AuthGuard } from './auth/guards/auth.guard';
+import { RandomGuard } from './auth/guards/random.guard';
+import { LoginComponent } from './auth/containers/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {
+    path: 'login', component: LoginComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'secret-random-number',
+    loadChildren: './random/random.module#RandomModule',
+    canActivate: [RandomGuard],
+    canLoad: [RandomGuard]
+  },
   { path: 'home', component: HomeComponent },
   { path: 'bills', component: BillsComponent },
   { path: 'realties', component: RealtiesComponent },

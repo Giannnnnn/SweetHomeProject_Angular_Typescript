@@ -1,3 +1,5 @@
+import { HeaderComponent } from './components/header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -21,12 +23,18 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableDataComponent } from './components/table-data/table-data.component';
+import { LoginComponent } from './auth/containers/login/login.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     RealtyComponent,
     BillComponent,
+    LoginComponent,
     HomeComponent,
     ReportComponent,
     RealtiesComponent,
@@ -34,14 +42,22 @@ import { TableDataComponent } from './components/table-data/table-data.component
     BillsComponent,
     TableDataComponent,
     ReportsComponent,
+    HeaderComponent,
     HomeComponent
   ],
   imports: [
     MatToolbarModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatIconModule,
     CommonModule,
     MatTableModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NgxEchartsModule.forRoot({
       echarts,
